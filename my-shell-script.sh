@@ -182,3 +182,18 @@ if [ "$essen" = "S" ]; then
 else
   echo "Ok... Nao serao instalados os pacotes do LaTeX"
 fi
+
+echo
+echo
+echo
+
+echo "Instalar as dependencias do R na dist do linux? (S/N) " 
+read essen
+if [ "$essen" = "S" ]; then
+    
+  echo "... instalando dependencias do R ..."
+  sudo apt-get build-dep r-base r-base-core
+
+else
+  echo "Ok... Nao serao instalados as deps do R"
+fi
